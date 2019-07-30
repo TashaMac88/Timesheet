@@ -1,5 +1,5 @@
 
-  var firebaseConfig = {
+  var config = {
     apiKey: "AIzaSyCDSe7YVyFCm3Uaop9ffgiPYMY-KDR1ul8",
     authDomain: "timesheet-59f66.firebaseapp.com",
     databaseURL: "https://timesheet-59f66.firebaseio.com",
@@ -9,9 +9,11 @@
     appId: "1:805998880268:web:3caca7f63ab47a6e"
   }
 
-firebase.initializeApp(firebaseConfig);
+
+firebase.initializeApp(config);
 
 var database=firebase.database();
+
 
 //database.ref().on("value", function (snap))
 //snapshot.ref.child('dishes').push({ mykey: 'true', ...
@@ -25,8 +27,9 @@ var database=firebase.database();
 
 
 
-$(".submit").on("click", function(event){
+$(".btn").on("click", function(event){
 event.preventDefault()
+console.log("click working");
 
 
 
@@ -43,8 +46,14 @@ event.preventDefault()
         rate: monthlyRate
         
     };
+    console.log("name: ", newEmployee.name);
+    console.log("role: ", newEmployee.role);
+    console.log("start date: " , newEmployee.start);
+    console.log("rate: ", newEmployee.rate);
 
     database.ref().push(newEmployee);
+    
+    console.log("new Employee added");
 
    
 
