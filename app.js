@@ -12,43 +12,42 @@
 firebase.initializeApp(firebaseConfig);
 
 var database=firebase.database();
-//database.ref().on("value", function (event))
 
-
-$(".submit").on("click"   ){
-
-
-
-
-
-
-    var EmployeeName = ("<tr>")
-    var role = ("<tr>")
-    var startDate = ("<tr>")
-    var monthlyRate = ("<tr>")
-    var totalBilled = ("<tr>")
-
-    employeeName = $("#employee-name-input").val().trim();
-    role = $("#role-input").val().trim();
-    startDate = $("#start-date-input").val().trim();
-    monthlyRate = $("#monthly-rate-input").val().trim()
-
-    $("#current-employees").append(EmployeeName)
-    $("#role").append(role)
-    $("#start-date").append(startDate)
-    $("#monthly-rate").append(monthlyRate)
-    $("#total-billed").append(totalBilled)
+//database.ref().on("value", function (snap))
+//snapshot.ref.child('dishes').push({ mykey: 'true', ...
+//$("#current-employees").append(EmployeeName)
+//$("#role").append(role)
+//$("#start-date").append(startDate)
+//$("#monthly-rate").append(monthlyRate)
+//$("#total-billed").append(totalBilled)
 
 
 
 
-    database.ref().set({
-       
+
+$(".submit").on("click", function(event){
+event.preventDefault()
 
 
+
+
+    var employeeName = $("#employee-name-input").val().trim();
+    var employeeRole = $("#role-input").val().trim();
+    var startDate = $("#start-date-input").val().trim();
+    var monthlyRate = $("#monthly-rate-input").val().trim()
+
+    var newEmployee ={
+        name: employeeName,
+        role: employeeRole,
+        start: startDate,
+        rate: monthlyRate
         
-      });
+    };
+
+    database.ref().push(newEmployee);
+
+   
 
 
 
-}
+})
