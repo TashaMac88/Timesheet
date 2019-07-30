@@ -1,0 +1,21 @@
+#heading {
+    text-align: center;
+    color: white;
+    background-color: black;
+    padding: 50px 0px;
+}
+#current-employees {
+    background-color: lightgray;
+    padding: 10px;
+}
+#results-label {
+    border-top: solid lightgray 1px;
+    border-bottom: solid lightgray 5px;
+}
+#add-employee {
+    background-color: lightgray;
+    padding: 10px;
+}
+.btn {
+    float: right;
+}

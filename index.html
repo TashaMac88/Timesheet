@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col" id="heading">
+                <h1>Employee Data Management</h1>
+                <h2>A Comprehensive Directory of Employee Billable Hours</h2>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col">
+                <p id="current-employees">Current Employees</p>
+            </div>
+        </div>
+        <div class="row" id="results-label">
+            <div class="col">
+                <p>Employee Name</p>
+            </div>
+            <div class="col">
+                <p>Role</p>
+            </div>
+            <div class="col">
+                <p>Start Date</p>
+            </div>
+            <div class="col">
+                <p>Months Worked</p>
+            </div>
+            <div class="col">
+                <p>Monthly Rate ($)</p>
+            </div>
+            <div class="col">
+                <p>Total Billed ($)</p>
+            </div>
+        </div>
+        <div class="row" id="results">
+            <div class="col">
+                <p></p>
+            </div>
+            <div class="col">
+                <p></p>
+            </div>
+            <div class="col">
+                <p></p>
+            </div>
+            <div class="col">
+                <p></p>
+            </div>
+            <div class="col">
+                <p></p>
+            </div>
+            <div class="col">
+                <p></p>
+            </div>
+        </div>
+        <br>
+        <p id="add-employee">Add Employee</p>
+        <form>
+            <div class="form-group">
+                <label for="exampleInputName1">Employee Name</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                    placeholder="Jane Doe">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputRole1">Role</label>
+                <input type="text" class="form-control" id="exampleInputPassword1" placeholder="CEO">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputStartDate1">Start Date (MM/DD/YYYY)</label>
+                <input type="text" class="form-control" id="exampleInputPassword1" placeholder="01/08/1989">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputMonthlyRate1">Monthly Rate</label>
+                <input type="text" class="form-control" id="exampleInputPassword1" placeholder="200000">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
